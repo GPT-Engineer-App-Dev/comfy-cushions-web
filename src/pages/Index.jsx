@@ -31,7 +31,7 @@ const Index = () => {
       <VStack spacing={8}>
         <Text fontSize="4xl" fontWeight="bold">Cushion Store</Text>
         <Text fontSize="xl">Find the perfect cushion for your home</Text>
-        <VStack spacing={6} width="100%">
+        <HStack spacing={6} width="100%" wrap="wrap" justifyContent="center">
           {cushions.map(cushion => (
             <Box key={cushion.id} borderWidth="1px" borderRadius="lg" overflow="hidden" width="100%" maxW="md">
               <Image src={cushion.image} alt={cushion.name} />
@@ -45,7 +45,7 @@ const Index = () => {
               </Box>
             </Box>
           ))}
-        </VStack>
+        </HStack>
       </VStack>
     </Container>
   );
